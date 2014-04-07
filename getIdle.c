@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 int main(void) {
+
     Display *dpy = XOpenDisplay(NULL);
 
     if (!dpy) {
@@ -9,8 +10,10 @@ int main(void) {
     }
 
     XScreenSaverInfo *info = XScreenSaverAllocInfo();
-    XScreenSaverQueryInfo(dpy, DefaultRootWindow(dpy), info);
-    printf("%u\n", info->idle);
+    XScreenSaverQueryInfo (dpy, DefaultRootWindow(dpy), info);
 
-      return(0);
+    // output the idle time
+    printf ("%u\n", info->idle);
+
+    return(0);
 }
