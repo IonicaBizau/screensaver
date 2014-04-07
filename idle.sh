@@ -9,7 +9,7 @@ while true; do
   if [[ $idleTimeMillis -gt $idleAfter && $idle = false  ]] ; then
     echo "start idle"
     kill "$fadeInPID"
-    xbacklight -set 0  -time 4000 -steps 400 &
+    xbacklight -set 0  -time 4000 -steps 500 &
     fadeOutPID=$!
     idle=true
   fi
