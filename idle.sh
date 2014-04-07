@@ -1,12 +1,11 @@
 #!/bin/bash
 
 idle=false
-idleAfter=1000
+idleAfter=$1
 brightnessValue=`xbacklight -get`
 
 while true; do
   idleTimeMillis=$(./getIdle)
-  echo $idleTimeMillis
   if [[ $idleTimeMillis -gt $idleAfter && $idle = false  ]] ; then
     kill "$fadeInPID"
     brightnessValue=`xbacklight -get`
