@@ -4,7 +4,7 @@
 ########
 # Help #
 ########
-if [[ $1 = "--help" ]] ; then
+if [[ $1 = "--help" || -z "$1" ]] ; then
     echo "screensaver --help"
     echo "usage: screensaver [options] idle-time"
     echo ""
@@ -13,6 +13,7 @@ if [[ $1 = "--help" ]] ; then
     echo "options:"
     echo "  --v, --version          print the version"
     echo "  --help                  print this output"
+    echo "  --debug                 enable debug mode that will print additional messages in stdout"
     echo ""
     echo "idle-time"
     echo "  The time in milliseconds when the computer is considered to be idle."
@@ -22,8 +23,16 @@ if [[ $1 = "--help" ]] ; then
 fi
 
 idle=false
-idleAfter=5000
+idleAfter=$1
 brightnessValue=`xbacklight -get`
+
+#########
+# Debug #
+#########
+if [[ $idleAfter = "--debug" ]] ; then
+    echo "[$(date +"%m-%d-%y-%T")] Debug mode enabled"
+    idleAfter=$2
+fi
 
 while true; do
   idleTimeMillis=$(./getIdle)
