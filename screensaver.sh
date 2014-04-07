@@ -1,7 +1,28 @@
 #!/bin/bash
 
+
+########
+# Help #
+########
+if [[ $1 = "--help" ]] ; then
+    echo "screensaver --help"
+    echo "usage: screensaver [options] idle-time"
+    echo ""
+    echo "Lightweight screensaver for Ubuntu"
+    echo ""
+    echo "options:"
+    echo "  --v, --version          print the version"
+    echo "  --help                  print this output"
+    echo ""
+    echo "idle-time"
+    echo "  The time in milliseconds when the computer is considered to be idle."
+    echo ""
+    echo "Documentation can be found at https://github.com/IonicaBizau/screensaver"
+    exit
+fi
+
 idle=false
-idleAfter=$1
+idleAfter=5000
 brightnessValue=`xbacklight -get`
 
 while true; do
