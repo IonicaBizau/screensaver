@@ -1,0 +1,8 @@
+Package: screensaver
+Version: 0.1.0
+Architecture: amd64
+Maintainer: Ionică Bizău <bizauionica@gmail.com>
+Depends: xbacklight
+Section: extras
+Homepage: https://github.com/IonicaBizau/screensaver
+Description: gnome-screensaver alternative for Ubuntu
