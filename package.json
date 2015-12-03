@@ -1,6 +1,6 @@
 {
   "name": "screensaver",
-  "version": "1.0.0",
+  "version": "2.1.0",
   "description": "A small screensaver app written in C.",
   "main": "index.js",
   "scripts": {
