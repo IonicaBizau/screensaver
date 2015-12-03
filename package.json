@@ -1,0 +1,22 @@
+{
+  "name": "screensaver",
+  "version": "1.0.0",
+  "description": "A small screensaver app written in C.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IonicaBizau/screensaver.git"
+  },
+  "keywords": [
+    "screensaver"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/screensaver/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/screensaver#readme"
+}
