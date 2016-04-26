@@ -2,7 +2,7 @@
   "name": "screensaver",
   "version": "2.0.1",
   "description": "A small screensaver app written in C.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +18,16 @@
   "bugs": {
     "url": "https://github.com/IonicaBizau/screensaver/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/screensaver#readme"
+  "homepage": "https://github.com/IonicaBizau/screensaver#readme",
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "resources/",
+    "menu/",
+    "cli.js",
+    "index.js"
+  ]
 }
